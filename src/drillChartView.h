@@ -6,16 +6,17 @@
 #include "drilldownchart.h"
 
 class drillChartView : public QtCharts::QChartView {
- public:
-  explicit drillChartView(QWidget *parent = Q_NULLPTR);
-  explicit drillChartView(QtCharts::QChart *chart, QWidget *parent = Q_NULLPTR);
-  ~drillChartView();
+   public:
+	explicit drillChartView(QWidget *parent = Q_NULLPTR);
+	explicit drillChartView(QtCharts::QChart *chart,
+							QWidget *parent = Q_NULLPTR);
+	~drillChartView();
 
- protected:
-  virtual void mousePressEvent(QMouseEvent *event) override;
+   protected:
+	virtual void mousePressEvent(QMouseEvent *event) override;
 
- private:
-  DrilldownChart *chart;
+   private:
+	DrilldownChart *chart;
 };
 
-#endif  // OS_PROJECT1_BACKBUTTON_H
+#endif	// OS_PROJECT1_BACKBUTTON_H

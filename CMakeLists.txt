@@ -16,13 +16,9 @@ find_package(Qt5 COMPONENTS Widgets Charts REQUIRED)
 add_executable(${PROJECT_NAME}
         src/main.cpp
         src/node.cpp
-        src/node.h
         src/drilldownchart.cpp
-        src/drilldownchart.h
         src/drilldownslice.cpp
-        src/drilldownslice.h
         src/drillChartView.cpp
-        src/drillChartView.h
         )
 
 find_package(Qt5Charts)

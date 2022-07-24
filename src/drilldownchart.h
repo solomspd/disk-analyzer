@@ -11,19 +11,19 @@ QT_CHARTS_END_NAMESPACE
 QT_CHARTS_USE_NAMESPACE
 
 class DrilldownChart : public QChart {
-  Q_OBJECT
- public:
-  explicit DrilldownChart(QGraphicsItem *parent = 0,
-                          Qt::WindowFlags wFlags = 0);
-  ~DrilldownChart();
-  void changeSeries(QAbstractSeries *series);
+	Q_OBJECT
+   public:
+	explicit DrilldownChart(QGraphicsItem *parent = 0,
+							Qt::WindowFlags wFlags = 0);
+	~DrilldownChart();
+	void changeSeries(QAbstractSeries *series);
 
- public Q_SLOTS:
-  void handleSliceClicked(QPieSlice *slice);
-  void handleRightClick();
+   public Q_SLOTS:
+	void handleSliceClicked(QPieSlice *slice);
+	void handleRightClick();
 
- private:
-  QAbstractSeries *m_currentSeries;
+   private:
+	QAbstractSeries *m_currentSeries;
 };
 
-#endif  // DRILLDOWNCHART_H
+#endif	// DRILLDOWNCHART_H

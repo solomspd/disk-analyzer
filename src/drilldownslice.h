@@ -44,26 +44,27 @@ QT_CHARTS_END_NAMESPACE
 QT_CHARTS_USE_NAMESPACE
 
 class DrilldownSlice : public QPieSlice {
-  Q_OBJECT
+	Q_OBJECT
 
- public:
-  DrilldownSlice(qreal value, QString prefix, QAbstractSeries* drilldownSeries,
-                 node* n, DrilldownChart*, QMainWindow*);
-  virtual ~DrilldownSlice();
-  QAbstractSeries* drilldownSeries();
-  QAbstractSeries* drillupSeries();
+   public:
+	DrilldownSlice(qreal value, QString prefix,
+				   QAbstractSeries* drilldownSeries, node* n, DrilldownChart*,
+				   QMainWindow*);
+	virtual ~DrilldownSlice();
+	QAbstractSeries* drilldownSeries();
+	QAbstractSeries* drillupSeries();
 
- public Q_SLOTS:
-  void updateLabel();
-  void showHighlight(bool show);
-  node* getNode();
+   public Q_SLOTS:
+	void updateLabel();
+	void showHighlight(bool show);
+	node* getNode();
 
- private:
-  QAbstractSeries* m_drilldownSeries;
-  QString m_prefix;
-  node* n;
-  QMainWindow* w;
-  DrilldownChart* chart;
+   private:
+	QAbstractSeries* m_drilldownSeries;
+	QString m_prefix;
+	node* n;
+	QMainWindow* w;
+	DrilldownChart* chart;
 };
 
-#endif  // DRILLDOWNSLICE_H
+#endif	// DRILLDOWNSLICE_H
